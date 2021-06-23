@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="KreatorTestow.kontrolka"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KreatorTestow"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <TextBox Text="{Binding Question, Mode=TwoWay}" Height="24" Width="448" Grid.Row="1" Margin="50,0,0,0"/>
+        <StackPanel Margin="201,20.2,50,120" Grid.Row="2">
+            <DockPanel>
+                <RadioButton GroupName="rb" x:Name="rb_1" Tag="0" IsChecked="{Binding AnswerChecked1, Mode=TwoWay}"  Margin="0,5,0,0"/>
+                <TextBox Text="{Binding Answers0, Mode=TwoWay}" Margin="2,2,100,2"/>
+            </DockPanel>
+            <DockPanel>
+                <RadioButton GroupName="rb" x:Name="rb_2" Tag="1" IsChecked="{Binding AnswerChecked2, Mode=TwoWay}"  Margin="0,5,0,0"/>
+                <TextBox Text="{Binding Answers1, Mode=TwoWay}" Margin="2,2,100,2"/>
+            </DockPanel>
+            <DockPanel>
+                <RadioButton GroupName="rb" x:Name="rb_3" Tag="2" IsChecked="{Binding AnswerChecked3, Mode=TwoWay}"  Margin="0,5,0,0"/>
+                <TextBox Text="{Binding Answers2, Mode=TwoWay}" Margin="2,2,100,2"/>
+            </DockPanel>
+            <DockPanel>
+                <RadioButton GroupName="rb" x:Name="rb_4" Tag="3" IsChecked="{Binding AnswerChecked4, Mode=TwoWay}"  Margin="0,5,0,0"/>
+                <TextBox Text="{Binding Answers3, Mode=TwoWay}" Margin="2,2,100,2"/>
+            </DockPanel>
+           
+            
+            
+        </StackPanel>
+    </Grid>
+</UserControl>
